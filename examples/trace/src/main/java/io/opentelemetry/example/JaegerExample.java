@@ -1,5 +1,6 @@
 package io.opentelemetry.example;
 
+import com.google.cloud.opentelemetry.trace.TraceExporter;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.opentelemetry.OpenTelemetry;
@@ -8,8 +9,6 @@ import io.opentelemetry.sdk.OpenTelemetrySdk;
 import io.opentelemetry.sdk.trace.export.SimpleSpanProcessor;
 import io.opentelemetry.trace.Span;
 import io.opentelemetry.trace.Tracer;
-
-// import com.google.cloud.opentelemetry.trace.TraceExporter;
 
 public class JaegerExample {
   // Jaeger Endpoint URL and PORT
