@@ -34,6 +34,10 @@ subprojects {
     }
     compileJava.dependsOn(verifyGoogleJavaFormat)
 
+    dependencies {
+        compile project(':trace-exporter')
+    }
+
     //create a single Jar with all dependencies
     task fatJar(type: Jar) {
         baseName = project.name + '-all'

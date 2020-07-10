@@ -12,8 +12,9 @@ pluginManagement {
 }
 
 rootProject.name = "opentelemetry-java-examples"
-include ":opentelemetry-examples-jaeger"
+include ":opentelemetry-examples-trace", ':trace-exporters'
         
+project(':trace-exporters').projectDir = new File('../exporters/trace/')
 
 rootProject.children.each {
     it.projectDir = "$rootDir/" + it.name
