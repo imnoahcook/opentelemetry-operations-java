@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface CloudTraceClient {
     void batchWriteSpans(ProjectName name, List<Span> spans);
+    void shutdown();
 }
